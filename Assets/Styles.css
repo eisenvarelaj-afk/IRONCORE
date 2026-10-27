@@ -1,1 +1,299 @@
+/* --- Nueva Estética Inspirada en LoroGym --- */
 
+:root {
+    /* Paleta de colores inspirada en la referencia */
+    --bg-deep: #000000;          /* Negro absoluto */
+    --bg-card: #111111;          /* Negro carbón oscuro para tarjetas */
+    --text-main: #FFFFFF;         /* Blanco puro */
+    --text-muted: #A1A1AA;        /* Gris medio para descripciones */
+    --accent-hover: #9fff00;     /* Verde neón brillante del botón */
+    --accent-secondary: #D4D4D8;  /* Gris claro para botones secundarios */
+    
+    --font-primary: 'Montserrat', sans-serif;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Navbar Comercial --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparente para que respire */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-hover);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--accent-hover);
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--accent-hover);
+    color: var(--bg-deep);
+    font-size: 0.6rem;
+    font-weight: 800;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Hero Impactante --- */
+.hero {
+    /* Fondo oscuro con la imagen de las pesas difuminadas */
+    background: radial-gradient(circle at 70% 50%, rgba(17, 17, 17, 0.2), rgba(0, 0, 0, 0.8)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    /* Tipografía masiva e icónica */
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Botones Profesionales --- */
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px; /* Bordes rectos, no redondeados */
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-hover);
+    color: var(--bg-deep);
+    border: 2px solid var(--accent-hover);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--text-muted);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-secondary);
+    color: var(--bg-deep);
+    border-color: var(--accent-secondary);
+}
+
+/* --- Secciones de Producto Premium --- */
+.catalog-section, .promo-section {
+    padding: 100px 5%;
+    background-color: var(--bg-deep);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* --- Grid de Tarjetas Oscuras --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background-color: var(--bg-card);
+    border: 1px solid #27272a; /* Borde sutil */
+    border-radius: 2px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-hover);
+}
+
+.product-img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: luminosity; /* Efecto blanco y negro al ver la tarjeta */
+    transition: var(--transition);
+}
+
+.product-card:hover .product-img img {
+    mix-blend-mode: normal; /* A color al hacer hover */
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-hover);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.product-price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price-current {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.add-to-cart-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart-btn:hover {
+    color: var(--accent-hover);
+    transform: scale(1.1);
+}
+
+/* --- Responsive Comercial --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    .nav-menu {
+        display: none; /* Simple menú hamburguesa para el futuro */
+    }
+}
