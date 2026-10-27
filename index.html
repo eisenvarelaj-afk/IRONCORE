@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONCORE FITNESS | Equipamiento de Alto Rendimiento</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">IRONCORE<span>FITNESS</span></div>
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+        </ul>
+        <div class="cart-btn" id="cartOpenBtn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>EQUIPAMIENTO<br>DE ACERO.</h1>
+            <p>Construye tu mejor versión con equipamiento diseñado para soportar cargas extremas. No hay atajos.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn btn-primary">Comprar Ahora</a>
+                <a href="#" class="btn btn-secondary">Consultar Plan Pro</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Blocks (Reemplazados por rejilla de productos) -->
+    <section class="promo-section" id="categorias">
+        <div class="section-header">
+            <h2>OFERTAS <span class="highlight">FLASH</span></h2>
+            <p>Equipamiento premium por tiempo limitado.</p>
+        </div>
+        <div class="product-grid" id="promoContainer">
+            <!-- Aquí se inyectarán dinámicamente las ofertas desde app.js -->
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section" id="catalogo">
+        <div class="section-header">
+            <h2>CATÁLOGO <span class="highlight">GENERAL</span></h2>
+            <p>Explora nuestra línea completa de fuerza.</p>
+        </div>
+        <div class="product-grid" id="productContainer">
+            <!-- Aquí se inyectarán dinámicamente los productos desde app.js -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p>&copy; 2026 IRONCORE FITNESS. Demo para proyecto escolar inspirada en LoroGym.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>CARRITO DE PRUEBAS</h3>
+            <button id="cartCloseBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Los items del carrito van aquí -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total estimado:</span>
+                <span id="cartTotal">$0 COP</span>
+            </div>
+            <!-- Botón Finalizar Compra con nuevo comportamiento -->
+            <button class="btn btn-primary btn-block" id="checkoutBtn">FINALIZAR COMPRA DE PRUEBA</button>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="assets/app.js"></script>
+</body>
+</html>
